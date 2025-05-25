@@ -1,1 +1,82 @@
- 
+ # Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Логи
+*.log
+logs/
+
+# Локальные настройки
+.env
+.env.local
+.env.*.local
+
+# База данных
+*.sqlite3
+*.db
+
+# Кэш
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Миграции (опционально, раскомментируйте если нужно)
+# alembic/versions/
+
+# Временные файлы
+*.tmp
+*.bak
+*.swp
+*~
+
+# Сертификаты и ключи
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+
+# Изображения и медиа
+uploads/
+media/
+static/
+
+# Документация
+docs/_build/
+site/
+
+# Jupyter Notebook
+.ipynb_checkpoints
