@@ -25,6 +25,8 @@ API сервер для проекта Quantex, разработанный на 
 
 ## Установка и запуск
 
+### Локальный запуск
+
 1. Клонируйте репозиторий:
 ```bash
 git clone git@github.com:AndyNortonDev/QuantexApi.git
@@ -68,36 +70,27 @@ alembic upgrade head
 python src/main.py
 ```
 
-## Запуск индексеров
+### Запуск через Docker
 
-Индексеры используются для отслеживания транзакций в различных блокчейнах. Каждый индексер можно запустить отдельно:
-
-### Ethereum индексер
+1. Клонируйте репозиторий:
 ```bash
-python src/indexer/eth/eth_indexer.py
+git clone git@github.com:AndyNortonDev/QuantexApi.git
+cd QuantexApi
 ```
-Отслеживает:
-- Транзакции ETH
-- ERC-20 токены
-- Смарт-контракты проекта
 
-### BSC индексер
-```bash
-python src/indexer/bsc/bsc_indexer.py
-```
-Отслеживает:
-- Транзакции BNB
-- BEP-20 токены
-- Смарт-контракты проекта
+2. Создайте файл .env с необходимыми переменными окружения (как описано выше)
 
-### TON индексер
+3. Запустите приложение с помощью Docker Compose:
 ```bash
-python src/indexer/ton/ton_indexer.py
+docker-compose up -d
 ```
-Отслеживает:
-- Транзакции TON
-- Jettons
-- Смарт-контракты проекта
+
+Приложение будет доступно по адресу http://localhost:8000
+
+Для остановки приложения:
+```bash
+docker-compose down
+```
 
 ## Работа с Pydantic
 
@@ -133,6 +126,8 @@ class UserResponse(BaseModel):
 ├── alembic.ini                 # Конфигурация Alembic для миграций
 ├── requirements.txt            # Зависимости проекта
 ├── README.md                   # Документация проекта
+├── Dockerfile                  # Конфигурация Docker
+├── docker-compose.yml         # Конфигурация Docker Compose
 └── src/                       # Исходный код
     ├── admin/                 # Административная панель
     │   ├── admin_panel.py     # Реализация админ-панели
@@ -158,12 +153,6 @@ class UserResponse(BaseModel):
     │   │   └── save_image.py # Работа с изображениями
     │   │
     │   ├── dashboard/       # Панель управления
-    │   │   ├── queries.py   # SQL запросы
-    │   │   ├── router.py    # FastAPI роутер
-    │   │   ├── service.py   # Бизнес-логика
-    │   │   └── shemas.py    # Pydantic модели
-    │   │
-    │   ├── indexer/         # API для индексеров
     │   │   ├── queries.py   # SQL запросы
     │   │   ├── router.py    # FastAPI роутер
     │   │   ├── service.py   # Бизнес-логика
@@ -203,21 +192,9 @@ class UserResponse(BaseModel):
     │   └── migrations/    # Миграции Alembic
     │       └── versions/  # Версии миграций
     │
-    ├── indexer/           # Индексация блокчейнов
-    │   ├── bsc/          # BSC индексер
-    │   │   ├── bsc_indexer.py # Основной код индексера
-    │   │   └── parsing.py     # Парсинг транзакций
-    │   │
-    │   ├── eth/          # ETH индексер
-    │   │   ├── eth_indexer.py # Основной код индексера
-    │   │   └── parsing.py     # Парсинг транзакций
-    │   │
-    │   └── ton/          # TON индексер
-    │       └── ton_indexer.py # Основной код индексера
-    │
     └── main.py           # Точка входа приложения
 ```
 
 ## Лицензия
 
-MIT 
+MIT
