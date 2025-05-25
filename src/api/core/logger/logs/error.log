@@ -1,0 +1,52 @@
+2025-02-25 18:37:15 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri', 'user@example.com', '$2b$12$ISXqtxNchV36UW0CvJRIb.p5zsJLcIj4Ou4aLd/Zw/AOt9gtTPEja', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - [crud.py:33]
+2025-02-25 18:37:51 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri', 'user@example.com', '$2b$12$yxdgLMq/IoHl5CvsGDLCeO4giFOADlZZYVElpfZWTvGP.kR4Kk.OO', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - [crud.py:33]
+2025-02-25 18:44:25 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri11', 'user1@example.com', '$2b$12$o63z4MPK7Ns5RxL6Hma4HO1NLtf/hMraMrXjs164DUNefY.pNn/AG', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - [crud.py:34]
+2025-02-26 15:44:20 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri', 'user@example.com', '$2b$12$01SB/1YLEYE38sK3QJHIWerdAwLYGYC1OTlbD4/o.jSccY5dHCgiS', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - [crud.py:34]
+2025-02-26 19:25:46 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('ivanchick1122', 'ivan@example.com', '$2b$12$xaS5z9ZNq8yBbm6JSmj1EuYq2uYZKAnNKK8vfdJ8o02R8w8eM0luS', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - [crud.py:34]
+2025-02-26 19:33:28 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.OperationalError) no such table: users
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri', 'user@example.com', '$2b$12$a/UsVXob4VoT0dNUdYe7.uzuuQbWYYE8yoJY1XVhHZBfdhy6Bizne', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) - [crud.py:34]
+2025-02-26 19:34:57 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.OperationalError) no such table: users
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri', 'user@example.com', '$2b$12$1Av/VegrOnjfV9KZ8hgFLerAxEpjH3auQhdeQZHr5NEcF.O3HEnaS', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) - [crud.py:34]
+2025-02-26 19:36:00 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.OperationalError) no such table: users
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri', 'user@example.com', '$2b$12$O.csDnUCYgV0mxHcaLW9CekZtAw8IkTcLTmWKH0l/dZ9ijrmsPvSm', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) - [crud.py:34]
+2025-02-26 19:44:49 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('stringstri', 'user@example.com', '$2b$12$l586TCFZKK15BAiQt1cnFeE7VvxoSS61yyW2R.B9IklS7dXPyRV5.', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - [crud.py:34]
+2025-02-27 19:53:33 - my_app - ERROR - Ошибка при создании пользователя: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (username, email, password, active, logged_in_at) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', '$2b$12$fgIcV2UKD9MExKexJ/tode42j4XfrjV83gmtLX1pxWC2l6VsY0lei', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - [crud.py:34]
+2025-03-01 18:39:15 - my_app - ERROR - Ошибка при создании JWT токена: module 'jwt' has no attribute 'encode' - [utils.py:46]
+2025-03-06 16:39:22 - my_app - ERROR - Ошибка при создании пользователя string: (sqlite3.OperationalError) no such column: users.daily_at
+[SQL: SELECT users.id, users.referral_id, users.username, users.name, users.password, users.email, users.phone, users."FA2", users.balance, users.points, users.active_vouchers, users.progress, users.voucher, users.level, users.daily_at, users.created_at, users.daily_day, users.active, users.logged_in_at 
+FROM users 
+WHERE users.username = ?]
+[parameters: ('string',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) - [crud.py:53]
+2025-03-07 10:58:02 - my_app - ERROR - Ошибка при создании пользователя string: Mapper 'Mapper[Voucher(vouchers)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called. - [crud.py:47]
+2025-03-19 17:59:16 - my_app - ERROR - Ошибка при создании JWT токена: module 'jwt' has no attribute 'encode' - [utils.py:46]
+2025-04-07 00:34:09 - my_app - ERROR - Ошибка при создании пользователя 11111: [Errno -3] Temporary failure in name resolution - [crud.py:40]
+2025-04-07 00:34:15 - my_app - ERROR - Ошибка при создании пользователя 111111: [Errno -3] Temporary failure in name resolution - [crud.py:40]
+2025-05-01 21:30:19 - my_app - ERROR - Ошибка при создании JWT токена: Algorithm 'RS256' could not be found. Do you have cryptography installed? - [utils.py:46]
