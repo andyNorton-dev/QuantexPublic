@@ -23,28 +23,13 @@ app = FastAPI(
     title="Auth API",
     version="1.0.0"
 )
-
-# Добавляем поддержку сессий с тем же ключом, что и в админ-панели
 app.add_middleware(SessionMiddleware, secret_key=SECRET_KEY)
 
-# Инициализируем админ-панель
 init_admin(app)
 
-# @app.on_event("startup")
-# async def startup_event():
-#     await init_db()
 
 from fastapi.middleware.cors import CORSMiddleware
 
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:8000",
-    "https://quantex2.vercel.app/",
-    "*"
-]
 
 app.add_middleware(
     CORSMiddleware,
@@ -56,25 +41,6 @@ app.add_middleware(
     max_age=3600,
 )
 
-@app.get('/make_all_info_in_tables')
-async def make_all_info_in_tables(db: AsyncSession = Depends(get_db)):
-    try:
-        await create_multiple_tasks(db)
-    except:
-        ...
-    try:
-        await add_vouchers(db)
-    except:
-        ...
-    try:
-        await create_multiple_academy(db)
-    except:
-        ...
-    try:
-        await create_initial_staking_options(db)
-        return {"message": "All info in tables"}
-    except Exception as e:
-        return {"message": f"Error: {e}"}
 
 app.include_router(user_router)
 app.include_router(wallet_router)
