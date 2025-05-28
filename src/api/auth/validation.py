@@ -1,4 +1,4 @@
-from fastapi import Depends, Form, HTTPException, BackgroundTasks
+from fastapi import Depends, Form, HTTPException, Body
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import jwt
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -17,8 +17,8 @@ from api.user.service import UserService
 
 http_bearer = HTTPBearer()
 async def validate_auth_user(
-        username: str = Form(),
-        password: str = Form(),
+        username: str = Body(...),
+        password: str = Body(...),
         db: AsyncSession = Depends(get_db),
 ) -> UserSchema:
     """
